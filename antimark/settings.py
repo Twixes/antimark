@@ -6,12 +6,11 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ['SECRET_KEY']
-
 DEBUG = os.getenv('ENV', '').lower().startswith('dev')
-
 ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
 
 INSTALLED_APPS = [
+    'poll.apps.PollConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,14 +71,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-us'
+SECURE_HSTS_SECONDS = 600
 
+LANGUAGE_CODE = 'pl'
+LANGUAGES = [
+    ('en', 'English'),
+    ('pl', 'polski')
+]
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
+USE_THOUSAND_SEPARATOR = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
