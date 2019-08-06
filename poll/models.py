@@ -138,7 +138,7 @@ class Vote(models.Model):
         verbose_name = gettext_lazy('vote')
         verbose_name_plural = gettext_lazy('votes')
         constraints = [
-            models.UniqueConstraint(fields=['completion', 'question', 'teacher'], name='unique_assignment')
+            models.UniqueConstraint(fields=['completion', 'question', 'teacher'], name='unique_vote')
             # TODO: add teacher_belongs_to_group constraint
         ]
 
