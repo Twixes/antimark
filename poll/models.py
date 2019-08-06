@@ -65,29 +65,29 @@ class Group(models.Model):
 
 
 class Assignment(models.Model):
-    teacher = models.ForeignKey(
-        Teacher, on_delete=models.CASCADE, related_name='assignments', related_query_name='assignment',
-        verbose_name=gettext_lazy('teacher')
+    group = models.ForeignKey(
+        Group, on_delete=models.CASCADE, related_name='assignments', related_query_name='assignment',
+        verbose_name=gettext_lazy('group')
     )
     subject = models.ForeignKey(
         Subject, on_delete=models.CASCADE, related_name='assignments', related_query_name='assignment',
         verbose_name=gettext_lazy('subject')
     )
-    group = models.ForeignKey(
-        Group, on_delete=models.CASCADE, related_name='assignments', related_query_name='assignment',
-        verbose_name=gettext_lazy('group')
+    teacher = models.ForeignKey(
+        Teacher, on_delete=models.CASCADE, related_name='assignments', related_query_name='assignment',
+        verbose_name=gettext_lazy('teacher')
     )
 
     class Meta:
         verbose_name = gettext_lazy('assignment')
         verbose_name_plural = gettext_lazy('assignments')
         constraints = [
-            models.UniqueConstraint(fields=['teacher', 'subject', 'group'], name='unique_assignment')
+            models.UniqueConstraint(fields=['group', 'subject', 'teacher'], name='unique_assignment')
             # TODO: add teacher_belongs_to_subject and subject_belongs_to_group constraints
         ]
 
     def __str__(self):
-        return f'{self.teacher} – {self.subject} – {self.group}'
+        return f'{self.group} – {self.subject} – {self.teacher}'
 
 
 class Question(models.Model):
