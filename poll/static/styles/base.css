@@ -1,0 +1,116 @@
+/* VARIABLES */
+
+:root {
+  --font-families: "Poppins", "Century Gothic", sans-serif;
+  --font-size--headline: 1.75rem;
+  --font-size--standard: 1.25rem;
+  --font-size--annotation: 1rem;
+  --color--brand: #0040ff;
+  --color--light: #fff;
+  --time--short: 200ms;
+  --time--medium: 400ms;
+  --bezier-curve--standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* GENERAL */
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color--background);
+  color: var(--color--text);
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  font: var(--font-size--standard) var(--font-families);
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--font-size--headline);
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  height: 3rem;
+  padding: 0 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 1.5rem;
+  background: var(--color--text);
+  color: var(--color--background);
+  text-transform: uppercase;
+  font: var(--font-size--standard) var(--font-families);
+  cursor: pointer;
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header__logo-link {
+  text-decoration: none;
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__symbol {
+  fill: var(--color--text);
+}
+
+.header__logotype {
+  margin-left: 0.5rem;
+  font-size: var(--font-size--headline);
+  text-decoration: none;
+}
+
+/* MAIN */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: var(--font-size--annotation);
+}

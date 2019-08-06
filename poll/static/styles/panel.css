@@ -1,0 +1,6 @@
+/* GENERAL */
+
+body {
+  --color--background: var(--color--light);
+  --color--text: var(--color--brand);
+}
