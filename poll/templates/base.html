@@ -1,0 +1,43 @@
+{% load i18n static %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+  <title>{% if title_location %}{{ title_location}} – {% endif %}Antimark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0040ff">
+  <meta
+    name="description"
+    content=
+      "{% trans "Teachers have been giving you marks the whole school year. Now you give marks to them." %}"
+  >
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static "apple-touch-icon.png" %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon-32x32.png" %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon-16x16.png" %}">
+  <link rel="mask-icon" href="{% static "safari-pinned-tab.svg" %}" color="#0040ff">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:700,700i&amp;subset=latin-ext">
+  <link rel="stylesheet" href="{% static "styles/base.css" %}">
+  {% block styles %}{% endblock %}
+</head>
+
+<body>
+  <header>
+    <div class="header__content">
+      <a href="{% url "index" %}" class="header__logo-link">
+        <div class="header__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="39" class="header__symbol">
+          <path
+            fill="inherit"
+            d="M12 39H0V27l3 3 18-18c3 3 3 9 0 12L9 36l3 3zm0-39h12v12l-3-3L3 27c-3-3-3-9 0-12L15 3l-3-3z"
+          />
+        </svg>
+        <span class="header__logotype">Antimark</span>
+        </div>
+      </a>
+      <div class="header__school">{{ school_name }}</div>
+    </div>
+  </header>
+  <main>{% block main %}{% endblock %}</main>
+  <footer>{% block footer %}{% endblock %}</footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

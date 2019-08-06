@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-06 20:29+0000\n"
-"PO-Revision-Date: 2019-08-06 20:29+0000\n"
+"POT-Creation-Date: 2019-08-06 23:17+0000\n"
+"PO-Revision-Date: 2019-08-06 23:28+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -136,3 +136,18 @@ msgstr "głos"
 #: poll/models.py:139
 msgid "votes"
 msgstr "głosy"
+
+#: poll/templates/base.html:11
+msgid ""
+"Teachers have been giving you marks the whole school year. Now you give "
+"marks to them."
+msgstr ""
+"Przez cały rok szkolny nauczyciele oceniali Twoją pracę. Teraz Ty oceń ich."
+
+#: poll/templates/index.html:5
+msgid "Teachers have been giving you marks the whole school year."
+msgstr "Przez cały rok szkolny nauczyciele oceniali Twoją pracę."
+
+#: poll/templates/index.html:6
+msgid "Now you give marks to them."
+msgstr "Teraz Ty oceń ich."
