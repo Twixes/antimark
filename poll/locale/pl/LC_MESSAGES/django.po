@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
-"Report-Msgid-Bugs-To: https://github.com/Twixes/antimark/issues\n"
-"POT-Creation-Date: 2019-08-05 23:02+0002\n"
-"PO-Revision-Date: 2019-08-06 00:39+0002\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-06 04:47+0002\n"
+"PO-Revision-Date: 2019-08-06 04:48+0002\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: poll/apps.py:6
+#: poll/apps.py:7
 msgid "Poll"
 msgstr "Ankieta"
 
@@ -43,82 +43,96 @@ msgstr "imię"
 msgid "last name"
 msgstr "nazwisko"
 
-#: poll/models.py:18 poll/models.py:67 poll/models.py:109
+#: poll/models.py:18 poll/models.py:70 poll/models.py:131
 msgid "teacher"
 msgstr "nauczyciel"
 
-#: poll/models.py:19 poll/models.py:34
+#: poll/models.py:19 poll/models.py:37
 msgid "teachers"
 msgstr "nauczyciele"
 
 #: poll/models.py:31
-msgid "name in \"Who teaches you …?\" case (e.g. \"English\")"
-msgstr "nazwa w przypadku \"Kto uczy cię …?\" (np. \"angielskiego\")"
-
-#: poll/models.py:38 poll/models.py:75
-msgid "subject"
-msgstr "przedmiot"
-
-#: poll/models.py:39 poll/models.py:52
-msgid "subjects"
-msgstr "przedmioty"
-
-#: poll/models.py:47
-msgid "identifier"
-msgstr "identyfikator"
-
-#: poll/models.py:49
-msgid "number of students"
-msgstr "liczba uczniów"
-
-#: poll/models.py:56 poll/models.py:71 poll/models.py:112
-msgid "group"
-msgstr "grupa"
-
-#: poll/models.py:57
-msgid "groups"
-msgstr "grupy"
-
-#: poll/models.py:79
-msgid "assignment"
-msgstr "przydział"
-
-#: poll/models.py:80
-msgid "assignments"
-msgstr "przydziały"
-
-#: poll/models.py:90
-msgid "text"
-msgstr "tekst"
-
-#: poll/models.py:92
-msgid "position"
-msgstr "pozycja"
-
-#: poll/models.py:96 poll/models.py:106
-msgid "question"
-msgstr "pytanie"
-
-#: poll/models.py:97
-msgid "questions"
-msgstr "pytania"
-
-#: poll/models.py:117
-msgid "cast at"
-msgstr "oddano"
-
-#: poll/models.py:120
-msgid "vote"
-msgstr "głos"
-
-#: poll/models.py:121
-msgid "votes"
-msgstr "głosy"
-
 msgctxt "subject name"
 msgid "name"
 msgstr "nazwa"
 
+#: poll/models.py:34
+msgid "name in \"Who teaches you …?\" case (e.g. \"English\")"
+msgstr "nazwa w przypadku \"Kto uczy cię …?\" (np. \"angielskiego\")"
+
+#: poll/models.py:41 poll/models.py:74
+msgid "subject"
+msgstr "przedmiot"
+
+#: poll/models.py:42 poll/models.py:55
+msgid "subjects"
+msgstr "przedmioty"
+
+#: poll/models.py:50
+msgid "identifier"
+msgstr "identyfikator"
+
+#: poll/models.py:52
+msgid "number of students"
+msgstr "liczba uczniów"
+
+#: poll/models.py:59 poll/models.py:78 poll/models.py:110
+msgid "group"
+msgstr "grupa"
+
+#: poll/models.py:60
+msgid "groups"
+msgstr "grupy"
+
+#: poll/models.py:82
+msgid "assignment"
+msgstr "przydział"
+
+#: poll/models.py:83
+msgid "assignments"
+msgstr "przydziały"
+
+#: poll/models.py:94
+msgid "text"
+msgstr "tekst"
+
+#: poll/models.py:96
+msgid "position"
+msgstr "pozycja"
+
+#: poll/models.py:100 poll/models.py:125 poll/models.py:128
+msgid "question"
+msgstr "pytanie"
+
+#: poll/models.py:101
+msgid "questions"
+msgstr "pytania"
+
+#: poll/models.py:112
+msgid "added at"
+msgstr "dodano"
+
+#: poll/models.py:115 poll/models.py:119
+msgid "completion"
+msgstr "wypełnienie"
+
+#: poll/models.py:116
+msgid "completions"
+msgstr "wypełnienia"
+
+#: poll/models.py:119 poll/models.py:146
+msgid "No."
+msgstr "nr"
+
+#: poll/models.py:134
 msgctxt "school mark"
 msgid "mark"
 msgstr "ocena"
+
+#: poll/models.py:138 poll/models.py:146
+msgid "vote"
+msgstr "głos"
+
+#: poll/models.py:139
+msgid "votes"
+msgstr "głosy"
