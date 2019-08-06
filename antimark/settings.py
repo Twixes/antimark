@@ -1,6 +1,7 @@
 """Django settings for antimark project."""
 
 import os
+from django.utils.translation import gettext_lazy as _
 import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,6 +23,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -73,10 +75,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 SECURE_HSTS_SECONDS = 600
 
-LANGUAGE_CODE = 'pl'
+LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
-    ('en', 'English'),
-    ('pl', 'polski')
+    ('en-us', _('English')),
+    ('pl', _('Polish'))
 ]
 TIME_ZONE = 'UTC'
 USE_I18N = True

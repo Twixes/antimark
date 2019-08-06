@@ -1,4 +1,4 @@
-# Polish translation for Antimark.
+# Polish translation for Antimark Poll.
 # Copyright (C) 2019 Twixes
 # This file is distributed under the same license as the antimark package.
 # Twixes <dev@twixes.com>, 2019.
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-06 04:47+0002\n"
-"PO-Revision-Date: 2019-08-06 04:48+0002\n"
+"POT-Creation-Date: 2019-08-06 20:29+0000\n"
+"PO-Revision-Date: 2019-08-06 20:29+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -43,7 +43,7 @@ msgstr "imię"
 msgid "last name"
 msgstr "nazwisko"
 
-#: poll/models.py:18 poll/models.py:70 poll/models.py:131
+#: poll/models.py:18 poll/models.py:78 poll/models.py:131
 msgid "teacher"
 msgstr "nauczyciel"
 
@@ -76,7 +76,7 @@ msgstr "identyfikator"
 msgid "number of students"
 msgstr "liczba uczniów"
 
-#: poll/models.py:59 poll/models.py:78 poll/models.py:110
+#: poll/models.py:59 poll/models.py:70 poll/models.py:110
 msgid "group"
 msgstr "grupa"
 
