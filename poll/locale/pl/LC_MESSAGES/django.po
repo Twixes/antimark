@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-07 15:56+0000\n"
-"PO-Revision-Date: 2019-08-07 15:58+0000\n"
+"POT-Creation-Date: 2019-08-07 18:05+0000\n"
+"PO-Revision-Date: 2019-08-07 18:06+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -145,14 +145,15 @@ msgstr "Strona nie została znaleziona"
 msgid "Server error"
 msgstr "Błąd serwera"
 
-#: poll/templates/base.html:11
+#: poll/templates/base.html:12 poll/templates/base.html:19
+#: poll/templates/base.html:27
 msgid ""
-"Teachers have been grading your work the whole school year. Now you give "
-"marks to them."
+"Teachers have been grading your work the whole school year. Now you grade "
+"theirs."
 msgstr ""
 "Przez cały rok szkolny nauczyciele oceniali Twoją pracę. Teraz Ty oceń ich."
 
-#: poll/templates/base.html:37
+#: poll/templates/base.html:54
 msgid "Your school"
 msgstr "Twoja szkoła"
 
