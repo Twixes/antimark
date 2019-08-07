@@ -9,6 +9,7 @@ $min-height--tablet: "min-height: 40rem";
 
 :root {
   --font-families: "Poppins", "Century Gothic", "Arial Black", sans-serif;
+  --font-weight: 700;
   --font-size--error-code: 8rem;
   --font-size--headline: 1.75rem;
   --font-size--standard: 1.25rem;
@@ -33,7 +34,7 @@ body {
   color: var(--color--text);
   text-align: center;
   text-rendering: optimizeLegibility;
-  font: var(--font-size--standard) var(--font-families);
+  font: var(--font-weight) var(--font-size--standard) var(--font-families);
 }
 
 a {
@@ -56,6 +57,7 @@ ul {
 }
 
 button {
+  transition: transform 200ms var(--bezier-curve--standard), width 200ms var(--bezier-curve--standard);
   height: 3rem;
   padding: 0 1.5rem;
   outline: none;
@@ -66,6 +68,30 @@ button {
   text-transform: uppercase;
   font: var(--font-size--standard) var(--font-families);
   cursor: pointer;
+  &:active {
+    transform: scale(0.9375);
+  }
+}
+
+.button--forward {
+  &::after {
+    content: "→";
+    transition:
+      opacity 200ms var(--bezier-curve--standard),
+      width 200ms var(--bezier-curve--standard),
+      margin 200ms var(--bezier-curve--standard);
+    display: inline-block;
+    opacity: 0;
+    width: 0;
+    margin-left: 0;
+    font-weight: var(--font-weight);
+    font-family: "Inter", sans-serif;
+  }
+  &:hover::after {
+    opacity: 1;
+    margin-left: 0.5rem;
+    width: 1rem;
+  }
 }
 
 .responsive-content {
