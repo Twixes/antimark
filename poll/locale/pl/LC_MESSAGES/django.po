@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-06 23:17+0000\n"
-"PO-Revision-Date: 2019-08-06 23:28+0000\n"
+"POT-Creation-Date: 2019-08-07 00:01+0000\n"
+"PO-Revision-Date: 2019-08-07 00:02+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -144,10 +144,14 @@ msgid ""
 msgstr ""
 "Przez cały rok szkolny nauczyciele oceniali Twoją pracę. Teraz Ty oceń ich."
 
-#: poll/templates/index.html:5
+#: poll/templates/index.html:7
 msgid "Teachers have been giving you marks the whole school year."
 msgstr "Przez cały rok szkolny nauczyciele oceniali Twoją pracę."
 
-#: poll/templates/index.html:6
+#: poll/templates/index.html:8
 msgid "Now you give marks to them."
 msgstr "Teraz Ty oceń ich."
+
+#: poll/templates/index.html:10
+msgid "Begin"
+msgstr "Rozpocznij"
