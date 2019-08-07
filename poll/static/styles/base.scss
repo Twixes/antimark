@@ -16,6 +16,7 @@ $min-height--tablet: "min-height: 40rem";
   --font-size--annotation: 1rem;
   --color--brand: #0040ff;
   --color--light: #fff;
+  --opacity--annotation: 0.75;
   --time--short: 200ms;
   --time--medium: 400ms;
   --bezier-curve--standard: cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -81,16 +82,16 @@ button {
       width 200ms var(--bezier-curve--standard),
       margin 200ms var(--bezier-curve--standard);
     display: inline-block;
-    opacity: 0;
     width: 0;
     margin-left: 0;
+    opacity: 0;
     font-weight: var(--font-weight);
     font-family: "Inter", sans-serif;
   }
   &:hover::after {
-    opacity: 1;
-    margin-left: 0.5rem;
     width: 1rem;
+    margin-left: 0.5rem;
+    opacity: 1;
   }
 }
 
@@ -112,14 +113,17 @@ button {
   }
 }
 
+.fixed-bar {
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+}
 
 /* HEADER */
 
 header {
-  position: fixed;
   top: 0;
-  width: 100%;
-  height: 4rem;
   background: var(--color--background);
 }
 
@@ -172,11 +176,10 @@ main {
 /* FOOTER */
 
 footer {
-  position: fixed;
-  bottom: 1rem;
-  width: 100%;
-  text-align: center;
+  bottom: 0;
   font-size: var(--font-size--annotation);
+  opacity: var(--opacity--annotation);
+  line-height: 4rem;
 }
 
 /* ERROR PAGE */
