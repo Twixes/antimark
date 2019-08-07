@@ -138,7 +138,12 @@ header {
   }
 }
 
-.header__logo-link {
+.header__location {
+  display: flex;
+  font-size: var(--font-size--headline);
+}
+
+.header__link {
   text-decoration: none;
 }
 
@@ -152,8 +157,6 @@ header {
 
 .header__logotype {
   margin-left: 0.5rem;
-  font-size: var(--font-size--headline);
-  text-decoration: none;
 }
 
 .header__school-name {
@@ -162,6 +165,7 @@ header {
     display: block;
   }
 }
+
 /* MAIN */
 
 main {

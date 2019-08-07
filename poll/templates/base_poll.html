@@ -7,9 +7,5 @@
 {% endblock %}
 
 {% block footer %}
-  <footer class="fixed-bar"><a href="">Panel</a></footer>
-{% endblock %}
-
-{% block scripts %}
-  <script src="{% static "scripts/poll.js" %}"></script>
+  <footer class="fixed-bar"><a href="{% url "panel" %}">Panel</a></footer>
 {% endblock %}

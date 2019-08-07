@@ -7,6 +7,8 @@ from .settings import DEBUG
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('poll/', TemplateView.as_view(template_name='poll.html'), name='poll'),
+    path('panel/', TemplateView.as_view(template_name='panel.html'), name='panel'),
     path('admin/', admin.site.urls, name='admin')
 ]
 
