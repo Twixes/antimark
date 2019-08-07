@@ -125,6 +125,7 @@ button {
 header {
   top: 0;
   background: var(--color--background);
+  z-index: 300;
 }
 
 .header__content {
@@ -162,6 +163,7 @@ header {
     display: block;
   }
 }
+
 /* MAIN */
 
 main {
@@ -171,6 +173,7 @@ main {
   justify-content: center;
   height: 100%;
   margin: 0 auto;
+  z-index: 200;
 }
 
 /* FOOTER */
@@ -180,6 +183,7 @@ footer {
   font-size: var(--font-size--annotation);
   opacity: var(--opacity--annotation);
   line-height: 4rem;
+  z-index: 100;
 }
 
 /* ERROR PAGE */
