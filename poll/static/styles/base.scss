@@ -2,6 +2,7 @@
 
 :root {
   --font-families: "Poppins", "Century Gothic", sans-serif;
+  --font-size--error-code: 8rem;
   --font-size--headline: 1.75rem;
   --font-size--standard: 1.25rem;
   --font-size--annotation: 1rem;
@@ -33,7 +34,13 @@ a {
 }
 
 h1 {
+  margin: 0 0 1rem 0;
   font-size: var(--font-size--headline);
+}
+
+.error-code {
+  line-height: 1;
+  font-size: var(--font-size--error-code);
 }
 
 p {
