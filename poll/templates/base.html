@@ -21,7 +21,7 @@
 
 <body>
   <header>
-    <div class="header__content">
+    <div class="header__content responsive-content">
       <a href="{% url "index" %}" class="header__logo-link">
         <div class="header__logo">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="39" class="header__symbol">
@@ -36,7 +36,7 @@
       <div class="header__school">{{ school_name }}</div>
     </div>
   </header>
-  <main>{% block main %}{% endblock %}</main>
+  <main class="responsive-content">{% block main %}{% endblock %}</main>
   <footer>{% block footer %}{% endblock %}</footer>
   {% block scripts %}{% endblock %}
 </body>

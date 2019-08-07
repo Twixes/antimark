@@ -1,7 +1,14 @@
-/* VARIABLES */
+/* SASS VARIABLES */
+
+$min-width--desktop: "min-width: 100rem";
+$min-width--laptop: "min-width: 80rem";
+$min-width--tablet: "min-width: 40rem";
+$min-height--tablet: "min-height: 40rem";
+
+/* CSS VARIABLES */
 
 :root {
-  --font-families: "Poppins", "Century Gothic", sans-serif;
+  --font-families: "Poppins", "Century Gothic", "Arial Black", sans-serif;
   --font-size--error-code: 8rem;
   --font-size--headline: 1.75rem;
   --font-size--standard: 1.25rem;
@@ -38,11 +45,6 @@ h1 {
   font-size: var(--font-size--headline);
 }
 
-.error-code {
-  line-height: 1;
-  font-size: var(--font-size--error-code);
-}
-
 p {
   margin: 0;
 }
@@ -66,6 +68,25 @@ button {
   cursor: pointer;
 }
 
+.responsive-content {
+  max-width: 120rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media ($min-width--tablet) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @media ($min-width--laptop) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @media ($min-width--desktop) {
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+}
+
+
 /* HEADER */
 
 header {
@@ -73,14 +94,18 @@ header {
   top: 0;
   width: 100%;
   height: 4rem;
+  background: var(--color--background);
 }
 
 .header__content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   margin: 0 auto;
+  @media ($min-width--tablet) {
+    justify-content: space-between;
+  }
 }
 
 .header__logo-link {
@@ -101,6 +126,12 @@ header {
   text-decoration: none;
 }
 
+.header__school {
+  display: none;
+  @media ($min-width--tablet) {
+    display: block;
+  }
+}
 /* MAIN */
 
 main {
@@ -108,16 +139,23 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 100%;
+  margin: 0 auto;
 }
 
 /* FOOTER */
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
   width: 100%;
   text-align: center;
   font-size: var(--font-size--annotation);
+}
+
+/* ERROR PAGE */
+
+.error-code {
+  line-height: 1;
+  font-size: var(--font-size--error-code);
 }
