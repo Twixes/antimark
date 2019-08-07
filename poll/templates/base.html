@@ -2,6 +2,7 @@
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
+  <meta charset="utf-8">
   <title>{% if title_location %}{{ title_location}} – {% endif %}Antimark</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0040ff">
@@ -10,6 +11,14 @@
     content=
       "{% trans "Teachers have been giving you marks the whole school year. Now you give marks to them." %}"
   >
+  <meta
+    property="og:description"
+    content="{% trans "Teachers have been giving you marks the whole school year. Now you give marks to them." %}"
+  >
+  <meta property="og:site_name" content="Antimark">
+  <meta property="og:type" content="object">
+  <meta property="og:title" content="Antimark">
+  <meta property="og:image" content="{% static "banner.png" %}">
   <link rel="apple-touch-icon" sizes="180x180" href="{% static "apple-touch-icon.png" %}">
   <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon-32x32.png" %}">
   <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon-16x16.png" %}">
