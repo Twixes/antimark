@@ -147,7 +147,7 @@ msgstr "Błąd serwera"
 
 #: poll/templates/base.html:11
 msgid ""
-"Teachers have been giving you marks the whole school year. Now you give "
+"Teachers have been grading your work the whole school year. Now you give "
 "marks to them."
 msgstr ""
 "Przez cały rok szkolny nauczyciele oceniali Twoją pracę. Teraz Ty oceń ich."
@@ -157,11 +157,11 @@ msgid "Your school"
 msgstr "Twoja szkoła"
 
 #: poll/templates/index.html:7
-msgid "Teachers have been giving you marks the whole school year."
+msgid "Teachers have been grading your work the whole school year."
 msgstr "Przez cały rok szkolny nauczyciele oceniali Twoją pracę."
 
 #: poll/templates/index.html:8
-msgid "Now you give marks to them."
+msgid "Now you grade theirs."
 msgstr "Teraz Ty oceń ich."
 
 #: poll/templates/index.html:10
