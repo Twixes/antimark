@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% load static %}
+{% load static sass_tags %}
 
 {% block styles %}
-  <link rel="stylesheet" href="{% static "styles/poll.css" %}">
+  <link rel="stylesheet" href="{% sass_src "styles/poll.scss" %}">
 {% endblock %}
 
 {% block footer %}

@@ -12,6 +12,7 @@ ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
 
 INSTALLED_APPS = [
     'poll.apps.PollConfig',
+    'sass_processor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,7 +75,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-SECURE_HSTS_SECONDS = 600
+SECURE_HSTS_SECONDS = 600 # TODO: increase SECURE_HSTS_SECONDS
 
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
@@ -90,3 +91,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder'
+]
+
+SASS_PRECISION = 8
