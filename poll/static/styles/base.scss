@@ -20,7 +20,9 @@ $min-height--tablet: "min-height: 40rem";
   --time--short: 200ms;
   --time--medium: 400ms;
   --time--long: 1000ms;
-  --bezier-curve--standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --easing--standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --easing--decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --easing--accelerate: cubic-bezier(0.4, 0.0, 1, 1);
 }
 
 /* GENERAL */
@@ -63,7 +65,7 @@ ul {
 }
 
 button {
-  transition: transform 200ms var(--bezier-curve--standard), width 200ms var(--bezier-curve--standard);
+  transition: transform 200ms var(--easing--standard), width 200ms var(--easing--standard);
   height: 3rem;
   padding: 0 1.5rem;
   outline: none;
@@ -83,9 +85,9 @@ button {
   &::after {
     content: "→";
     transition:
-      opacity 200ms var(--bezier-curve--standard),
-      width 200ms var(--bezier-curve--standard),
-      margin 200ms var(--bezier-curve--standard);
+      opacity 200ms var(--easing--standard),
+      width 200ms var(--easing--standard),
+      margin 200ms var(--easing--standard);
     display: inline-block;
     width: 0;
     margin-left: 0;

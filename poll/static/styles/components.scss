@@ -1,8 +1,8 @@
 /* SPINNER */
 
 .spinner {
-  animation: spin var(--time--long) var(--bezier-curve--standard) infinite;
-  transition: var(--time--short) var(--bezier-curve--standard);
+  animation: spin var(--time--long) var(--easing--standard) infinite;
+  transition: var(--time--short) var(--easing--standard);
   width: 3rem;
   height: 3rem;
   border: solid transparent 0.5rem;
