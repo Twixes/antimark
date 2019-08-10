@@ -3,7 +3,7 @@
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
   <meta charset="utf-8">
-  <title>{% if title_location %}{{ title_location}} – {% endif %}Antimark</title>
+  <title>{% block title-location %}{% endblock %}Antimark</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0040ff">
   <meta
@@ -13,7 +13,7 @@
   >
   <meta property="og:site_name" content="Antimark">
   <meta property="og:type" content="object">
-  <meta property="og:title" content="Antimark">
+  <meta property="og:title" content="{% block title-location %}{% endblock %}Antimark">
   <meta
     property="og:description"
     content="{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
@@ -21,7 +21,7 @@
   <meta property="og:image" content="{% static "banner.png" %}">
   <meta name="twitter:site" content="@antimarkapp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Antimark">
+  <meta name="twitter:title" content="{% block title-location %}{% endblock %}Antimark">
   <meta
     name="twitter:description"
     content="{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
