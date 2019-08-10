@@ -3,7 +3,9 @@
 {% load static sass_tags %}
 
 {% block styles %}
-<link rel="stylesheet" href="{% sass_src "styles/panel.scss" %}">
+  <link rel="stylesheet" href="{% sass_src "styles/panel.scss" %}">
 {% endblock %}
 
-{% block location %}&nbsp;–&nbsp;<a href="{% url "panel" %}" class="header__link">Panel</a>{% endblock %}
+{% block location %}
+  &nbsp;–&nbsp;<a href="{% url "panel" %}" class="header__link">Panel</a>
+{% endblock %}

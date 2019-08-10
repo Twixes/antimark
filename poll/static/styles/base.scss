@@ -19,10 +19,15 @@ $min-height--tablet: "min-height: 40rem";
   --opacity--annotation: 0.75;
   --time--short: 200ms;
   --time--medium: 400ms;
+  --time--long: 1000ms;
   --bezier-curve--standard: cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 /* GENERAL */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
 html, body {
   width: 100%;
@@ -96,7 +101,7 @@ button {
 }
 
 .responsive-content {
-  max-width: 120rem;
+  max-width: 160rem;
   padding-left: 1rem;
   padding-right: 1rem;
   @media ($min-width--tablet) {

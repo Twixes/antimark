@@ -1,0 +1,23 @@
+/* SPINNER */
+
+.spinner {
+  animation: spin var(--time--long) var(--bezier-curve--standard) infinite;
+  transition: var(--time--short) var(--bezier-curve--standard);
+  width: 3rem;
+  height: 3rem;
+  border: solid transparent 0.5rem;
+  border-left-color: var(--color--text);
+  border-right-color: var(--color--text);
+  border-radius: 1.5rem;
+  &-enter, &-leave-to {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    transform: rotate(360deg);
+  }
+}

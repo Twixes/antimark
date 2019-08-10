@@ -1,10 +1,14 @@
 {% extends "base_poll.html" %}
 
-{% load i18n static %}
+{% load i18n static sass_tags %}
+
+{% block styles %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% sass_src "styles/components.scss" %}">
+{% endblock %}
 
 {% block head-scripts %}
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue{% if not debug %}.min{% endif %}.js"></script>
-  <script src="{% url 'javascript-catalog' %}"></script>
+  {% include 'includes/app_scripts.html' %}
 {% endblock %}
 
 {% block body-scripts %}
@@ -12,6 +16,6 @@
 {% endblock %}
 
 {% block main %}
-<noscript><h1>{% trans "The poll requires JavaScript to work." %}</h1></noscript>
-<div id="app"></app>
+  <noscript><h1>{% trans "The poll requires JavaScript to work." %}</h1></noscript>
+  <div id="app"></app>
 {% endblock %}
