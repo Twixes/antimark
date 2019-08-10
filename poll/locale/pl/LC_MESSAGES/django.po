@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-07 18:05+0000\n"
-"PO-Revision-Date: 2019-08-07 18:06+0000\n"
+"POT-Creation-Date: 2019-08-10 14:21+0000\n"
+"PO-Revision-Date: 2019-08-10 14:21+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: poll/apps.py:7
+#: poll/apps.py:6
 msgid "Poll"
 msgstr "Ankieta"
 
@@ -153,7 +153,7 @@ msgid ""
 msgstr ""
 "Przez cały rok szkolny nauczyciele oceniali Twoją pracę. Teraz Ty oceń ich."
 
-#: poll/templates/base.html:54
+#: poll/templates/base.html:59
 msgid "Your school"
 msgstr "Twoja szkoła"
 
@@ -168,3 +168,11 @@ msgstr "Teraz Ty oceń ich."
 #: poll/templates/index.html:10
 msgid "Begin"
 msgstr "Rozpocznij"
+
+#: poll/templates/panel.html:19
+msgid "The panel requires JavaScript to work."
+msgstr "Panel wymaga do działania JavaScriptu."
+
+#: poll/templates/poll.html:19
+msgid "The poll requires JavaScript to work."
+msgstr "Ankieta wymaga do działania JavaScriptu."

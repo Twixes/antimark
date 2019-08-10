@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-07 18:05+0000\n"
-"PO-Revision-Date: 2019-08-07 18:06+0000\n"
+"POT-Creation-Date: 2019-08-10 14:21+0000\n"
+"PO-Revision-Date: 2019-08-10 14:21+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -19,10 +19,10 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: antimark/settings.py:83
+#: antimark/settings.py:88
 msgid "English"
 msgstr "angielski"
 
-#: antimark/settings.py:84
+#: antimark/settings.py:89
 msgid "Polish"
 msgstr "polski"
