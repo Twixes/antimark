@@ -1,4 +1,6 @@
-{% load i18n sass_tags static %}<!DOCTYPE html>
+{% load i18n static sass_tags %}
+
+<!DOCTYPE html>
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
@@ -13,15 +15,12 @@
   >
   <meta property="og:site_name" content="Antimark">
   <meta property="og:type" content="object">
-  <meta property="og:title" content="{% block title-location %}{% endblock %}Antimark">
   <meta
     property="og:description"
     content="{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
   >
   <meta property="og:image" content="{% static "banner.png" %}">
-  <meta name="twitter:site" content="@antimarkapp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% block title-location %}{% endblock %}Antimark">
   <meta
     name="twitter:description"
     content="{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"

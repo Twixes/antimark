@@ -2,6 +2,8 @@
 
 {% load i18n static sass_tags %}
 
+{% block title-location %}{% trans "Panel" %} – {% endblock %}
+
 {% block styles %}
   {{ block.super }}
   <link rel="stylesheet" href="{% sass_src "styles/components.scss" %}">
