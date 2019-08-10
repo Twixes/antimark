@@ -7,7 +7,12 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ['SECRET_KEY']
+
 DEBUG = os.getenv('ENV', '').lower().startswith('dev')
+INTERNAL_IPS = [
+    '127.0.0.1'
+]
+
 ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
 
 INSTALLED_APPS = [
