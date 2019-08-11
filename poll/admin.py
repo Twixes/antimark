@@ -13,7 +13,7 @@ class VoteInline(admin.TabularInline):
 
 
 class GroupAdmin(admin.ModelAdmin):
-    list_display = ('identifier', 'number_of_students')
+    list_display = ('name', 'number_of_students')
     inlines = [AssignmentInline]
 
 

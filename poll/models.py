@@ -47,7 +47,7 @@ class Subject(models.Model):
 
 
 class Group(models.Model):
-    identifier = models.CharField(unique=True, max_length=10, verbose_name=gettext_lazy('identifier'))
+    name = models.CharField(unique=True, max_length=20, verbose_name=gettext_lazy('name'))
     number_of_students = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(1)], verbose_name=gettext_lazy('number of students')
     )
@@ -58,10 +58,10 @@ class Group(models.Model):
     class Meta:
         verbose_name = gettext_lazy('group')
         verbose_name_plural = gettext_lazy('groups')
-        ordering = ['identifier']
+        ordering = ['name']
 
     def __str__(self):
-        return self.identifier
+        return self.name
 
 
 class Assignment(models.Model):
@@ -91,10 +91,10 @@ class Assignment(models.Model):
 
 
 class Question(models.Model):
-    text = models.CharField(max_length=100, unique=True, verbose_name=gettext_lazy('text'))
     position = models.PositiveSmallIntegerField(
         unique=True, default=1, validators=[MinValueValidator(1)], verbose_name=gettext_lazy('position')
     )
+    text = models.CharField(max_length=100, unique=True, verbose_name=gettext_lazy('text'))
 
     class Meta:
         verbose_name = gettext_lazy('question')

@@ -68,10 +68,6 @@ msgstr "przedmiot"
 msgid "subjects"
 msgstr "przedmioty"
 
-#: poll/models.py:50
-msgid "identifier"
-msgstr "identyfikator"
-
 #: poll/models.py:52
 msgid "number of students"
 msgstr "liczba uczniów"
