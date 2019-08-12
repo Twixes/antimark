@@ -1,31 +1,27 @@
-/* eslint-disable no-new */
+/* eslint-env browser */
+/* eslint-disable no-new, space-before-function-paren */
 /* globals Vue */
 
 Vue.component('spinner', {
-  props: {
-    loading: { type: Boolean, required: true }
-  },
-  data() {
-    return {
-      transitionDuration: getComputedStyle(document.body).getPropertyValue('--time--short').replace('ms', '').trim()
-    }
-  },
   template: `
-    <transition appear name="spinner" v-bind:duration="transitionDuration">
-      <div class='spinner' v-if="loading"></div>
-    </transition>
+    <div class='spinner'></div>
   `
 })
 
 new Vue({
-  el: '#app',
+  el: 'main',
   data: {
-    loading: true
+    loading: true,
+    timeShort: parseInt(getComputedStyle(document.body).getPropertyValue('--time--short').replace('ms', '').trim())
   },
-  computed: {},
   methods: {},
   mounted() {},
   template: `
-    <spinner v-bind:loading="loading"></spinner>
+    <main>
+      <transition appear name="fade" mode="out-in" v-bind:duration="timeShort">
+        <spinner v-if="loading"></spinner>
+        <h1 v-if="!loading">Hello</h1>
+      </transition>
+    </main>
   `
 })
