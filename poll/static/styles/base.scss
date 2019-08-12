@@ -30,8 +30,15 @@ $min-height--tablet: "min-height: 40rem";
 
 /* GENERAL */
 
-*, *:before, *:after {
+*, ::before, ::after {
   box-sizing: border-box;
+}
+
+:focus {
+  outline: solid var(--color--orange) 0.25rem;
+  .js-focus-visible &:not(.focus-visible) {
+    outline: none;
+  }
 }
 
 html, body {
@@ -199,7 +206,7 @@ main {
 footer {
   bottom: 0;
   font-size: var(--font-size--annotation);
-  opacity: var(--opacity--annotation);
+  color: rgba(#fff, var(--opacity--annotation));
   line-height: 4rem;
 }
 
