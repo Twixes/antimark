@@ -131,7 +131,7 @@ class Vote(models.Model):
         Teacher, on_delete=models.CASCADE, related_name='votes', related_query_name='vote', verbose_name=gettext_lazy('teacher')
     )
     mark = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(6)], verbose_name=pgettext_lazy('school mark', 'mark')
+        validators=[MinValueValidator(0), MaxValueValidator(2)], verbose_name=pgettext_lazy('school mark', 'mark')
     )
 
     class Meta:
