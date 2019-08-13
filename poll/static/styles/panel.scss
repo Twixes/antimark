@@ -1,6 +1,7 @@
 /* CSS VARIABLES */
 
 :root {
-  --color--background: var(--color--light);
-  --color--text: var(--color--brand);
+  --color--background: var(--color--contrast);
+  --color--foreground: var(--color--brand);
+  --color--accent: var(--color--orange);
 }

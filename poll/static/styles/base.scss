@@ -15,7 +15,7 @@ $min-height--tablet: "min-height: 40rem";
   --font-size--standard: 1.25rem;
   --font-size--annotation: 1rem;
   --color--brand: #0040ff;
-  --color--light: #fff;
+  --color--contrast: #fff;
   --color--red: #f00;
   --color--orange: #ffbf00;
   --color--green: #00e539;
@@ -35,7 +35,7 @@ $min-height--tablet: "min-height: 40rem";
 }
 
 :focus {
-  outline: solid var(--color--orange) 0.25rem;
+  outline: solid var(--color--accent) 0.25rem;
   .js-focus-visible &:not(.focus-visible) {
     outline: none;
   }
@@ -50,7 +50,7 @@ body {
   max-width: 160rem;
   margin: 0;
   background: var(--color--background);
-  color: var(--color--text);
+  color: var(--color--foreground);
   text-align: center;
   text-rendering: optimizeLegibility;
   font: var(--font-weight) var(--font-size--standard) var(--font-families);
@@ -82,7 +82,7 @@ button {
   outline: none;
   border: none;
   border-radius: 1.5rem;
-  background: var(--color--text);
+  background: var(--color--foreground);
   color: var(--color--background);
   text-transform: uppercase;
   font: var(--font-size--standard) var(--font-families);
@@ -171,7 +171,7 @@ header {
 }
 
 .header__symbol {
-  fill: var(--color--text);
+  fill: var(--color--foreground);
 }
 
 .header__logotype {
