@@ -11,7 +11,8 @@ $min-height--tablet: "min-height: 40rem";
   --font-families: "Poppins", "Century Gothic", "Arial Black", sans-serif;
   --font-weight: 700;
   --font-size--error-code: 8rem;
-  --font-size--headline: 1.75rem;
+  --font-size--headline-1: 2rem;
+  --font-size--headline-0: 1.75rem;
   --font-size--standard: 1.25rem;
   --font-size--annotation: 1rem;
   --color--brand: #0040ff;
@@ -41,12 +42,14 @@ $min-height--tablet: "min-height: 40rem";
   }
 }
 
-html, body {
+html {
   width: 100%;
   height: 100%;
 }
 
 body {
+  width: 100%;
+  min-height: 100%;
   max-width: 160rem;
   margin: 0;
   background: var(--color--background);
@@ -62,7 +65,10 @@ a {
 
 h1 {
   margin: 0;
-  font-size: var(--font-size--headline);
+  font-size: var(--font-size--headline-0);
+  @media ($min-width--tablet) {
+    font-size: var(--font-size--headline-1);
+  }
 }
 
 p {
@@ -125,8 +131,8 @@ button {
     padding-right: 4rem;
   }
   @media ($min-width--desktop) {
-    padding-left: 16rem;
-    padding-right: 16rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
 
@@ -158,7 +164,7 @@ header {
 
 .header__location {
   display: flex;
-  font-size: var(--font-size--headline);
+  font-size: var(--font-size--headline-0);
 }
 
 .header__link {
