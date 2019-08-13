@@ -47,6 +47,7 @@ html, body {
 }
 
 body {
+  max-width: 160rem;
   margin: 0;
   background: var(--color--background);
   color: var(--color--text);
@@ -113,7 +114,6 @@ button {
 }
 
 .responsive-content {
-  max-width: 160rem;
   padding-left: 1rem;
   padding-right: 1rem;
   @media ($min-width--tablet) {
@@ -148,6 +148,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 160rem;
   height: 100%;
   margin: 0 auto;
   @media ($min-width--tablet) {
@@ -166,6 +167,7 @@ header {
 
 .header__logo {
   display: flex;
+  align-items: center;
 }
 
 .header__symbol {
@@ -190,14 +192,24 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
   min-height: 100%;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   & > * {
     margin-bottom: 1rem;
   }
   & > *:last-child {
     margin-bottom: 0;
+  }
+  @media ($min-width--tablet) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @media ($min-width--desktop) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
