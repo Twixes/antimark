@@ -28,7 +28,7 @@ class Teacher(models.Model):
 
 class Subject(models.Model):
     # e.g. "Subject: _English_" or "Przedmiot: _angielski_"
-    name = models.CharField(max_length=50, unique=True, verbose_name=pgettext_lazy('subject name', 'name'))
+    name = models.CharField(max_length=50, unique=True, verbose_name=pgettext_lazy('inanimate name', 'name'))
     # e.g. "Who teaches you _English_?" or "Kto uczy cię _angielskiego_?"
     name_teacher_selection_case = models.CharField(
         max_length=50, null=True, verbose_name=gettext_lazy('name in "Who teaches you …?" case (e.g. "English")')
@@ -47,7 +47,7 @@ class Subject(models.Model):
 
 
 class Group(models.Model):
-    name = models.CharField(unique=True, max_length=20, verbose_name=gettext_lazy('name'))
+    name = models.CharField(unique=True, max_length=20, verbose_name=pgettext_lazy('inanimate name', 'name'))
     number_of_students = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(1)], verbose_name=gettext_lazy('number of students')
     )

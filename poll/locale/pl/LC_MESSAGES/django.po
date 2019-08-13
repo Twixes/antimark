@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-10 14:21+0000\n"
-"PO-Revision-Date: 2019-08-10 14:21+0000\n"
+"POT-Creation-Date: 2019-08-13 00:08+0000\n"
+"PO-Revision-Date: 2019-08-13 0:09+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: poll/apps.py:6
+#: poll/apps.py:6 poll/templates/poll.html:5
 msgid "Poll"
 msgstr "Ankieta"
 
@@ -51,8 +51,8 @@ msgstr "nauczyciel"
 msgid "teachers"
 msgstr "nauczyciele"
 
-#: poll/models.py:31
-msgctxt "subject name"
+#: poll/models.py:31 poll/models.py:50
+msgctxt "inanimate name"
 msgid "name"
 msgstr "nazwa"
 
@@ -88,13 +88,13 @@ msgstr "przydział"
 msgid "assignments"
 msgstr "przydziały"
 
-#: poll/models.py:94
-msgid "text"
-msgstr "tekst"
-
-#: poll/models.py:96
+#: poll/models.py:95
 msgid "position"
 msgstr "pozycja"
+
+#: poll/models.py:97
+msgid "text"
+msgstr "tekst"
 
 #: poll/models.py:100 poll/models.py:125 poll/models.py:128
 msgid "question"
@@ -141,8 +141,8 @@ msgstr "Strona nie została znaleziona"
 msgid "Server error"
 msgstr "Błąd serwera"
 
-#: poll/templates/base.html:12 poll/templates/base.html:19
-#: poll/templates/base.html:27
+#: poll/templates/base.html:14 poll/templates/base.html:20
+#: poll/templates/base.html:26
 msgid ""
 "Teachers have been grading your work the whole school year. Now you grade "
 "theirs."
@@ -154,8 +154,8 @@ msgid "Your school"
 msgstr "Twoja szkoła"
 
 #: poll/templates/index.html:7
-msgid "Teachers have been grading your work the whole school year."
-msgstr "Przez cały rok szkolny nauczyciele oceniali Twoją pracę."
+msgid "Teachers have been grading your work the whole school year."
+msgstr "Przez cały rok szkolny nauczyciele oceniali Twoją pracę."
 
 #: poll/templates/index.html:8
 msgid "Now you grade theirs."
@@ -165,10 +165,14 @@ msgstr "Teraz Ty oceń ich."
 msgid "Begin"
 msgstr "Rozpocznij"
 
-#: poll/templates/panel.html:19
+#: poll/templates/panel.html:5
+msgid "Panel"
+msgstr "Panel"
+
+#: poll/templates/panel.html:21
 msgid "The panel requires JavaScript to work."
 msgstr "Panel wymaga do działania JavaScriptu."
 
-#: poll/templates/poll.html:19
+#: poll/templates/poll.html:21
 msgid "The poll requires JavaScript to work."
 msgstr "Ankieta wymaga do działania JavaScriptu."
