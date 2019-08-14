@@ -3,64 +3,64 @@
 <!DOCTYPE html>
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
-<head>
-  <meta charset="utf-8">
-  <title>{% block title-location %}{% endblock %}Antimark</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0040ff">
-  <meta
-    name="description"
-    content=
-      "{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
-  >
-  <meta property="og:site_name" content="Antimark">
-  <meta property="og:type" content="object">
-  <meta
-    property="og:description"
-    content="{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
-  >
-  <meta property="og:image" content="{% static "banner.png" %}">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta
-    name="twitter:description"
-    content="{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
-  >
-  <meta name="twitter:image:src" content="{% static "banner.png" %}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{% static "apple-touch-icon.png" %}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon-32x32.png" %}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon-16x16.png" %}">
-  <link rel="mask-icon" href="{% static "safari-pinned-tab.svg" %}" color="#0040ff">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:700,700i&amp;subset=latin-ext">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
-  <link rel="stylesheet" href="{% sass_src "styles/base.scss" %}">
-  <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js"></script>
-  {% block styles %}{% endblock %}
-  {% block head-scripts %}{% endblock %}
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title-location %}{% endblock %}Antimark</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0040ff">
+    <meta
+      name="description"
+      content=
+        "{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
+    >
+    <meta property="og:site_name" content="Antimark">
+    <meta property="og:type" content="object">
+    <meta
+      property="og:description"
+      content="{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
+    >
+    <meta property="og:image" content="{% static "banner.png" %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:description"
+      content="{% trans "Teachers have been grading your work the whole school year. Now you grade theirs." %}"
+    >
+    <meta name="twitter:image:src" content="{% static "banner.png" %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon-16x16.png" %}">
+    <link rel="mask-icon" href="{% static "safari-pinned-tab.svg" %}" color="#0040ff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:700,700i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" href="{% sass_src "styles/base.scss" %}">
+    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js"></script>
+    {% block styles %}{% endblock %}
+    {% block head-scripts %}{% endblock %}
+  </head>
 
-<body>
-  <header class="edge-bar">
-    <div class="header__content responsive-content">
-      <div class="header__location">
-        <a href="{% url "index" %}" class="header__link">
-          <div class="header__logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="39" class="header__symbol">
-            <path
-              fill="inherit"
-              d="M12 39H0V27l3 3 18-18c3 3 3 9 0 12L9 36l3 3zm0-39h12v12l-3-3L3 27c-3-3-3-9 0-12L15 3l-3-3z"
-            />
-          </svg>
-          <div class="header__logotype">Antimark</div>
-          </div>
-        </a>
-        {% block location %}{% endblock %}
+  <body>
+    <header class="edge-bar">
+      <div>
+        <div class="location">
+          <a href="{% url "index" %}" class="link">
+            <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="39" class="symbol">
+              <path
+                fill="inherit"
+                d="M12 39H0V27l3 3 18-18c3 3 3 9 0 12L9 36l3 3zm0-39h12v12l-3-3L3 27c-3-3-3-9 0-12L15 3l-3-3z"
+              />
+            </svg>
+            <div class="logotype">Antimark</div>
+            </div>
+          </a>
+          {% block location %}{% endblock %}
+        </div>
+        <div class="school-name">{{ school_name|default:_("Your school") }}</div>
       </div>
-      <div class="header__school-name">{{ school_name|default:_("Your school") }}</div>
-    </div>
-  </header>
-  <main class="responsive-content">{% block main %}{% endblock %}</main>
-  {% block footer %}{% endblock %}
-  {% block body-scripts %}{% endblock %}
-</body>
+    </header>
+    <main>{% block main %}{% endblock %}</main>
+    {% block footer %}{% endblock %}
+    {% block body-scripts %}{% endblock %}
+  </body>
 </html>

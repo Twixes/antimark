@@ -127,26 +127,25 @@ button {
   text-transform: uppercase;
   font: var(--font-size--standard) var(--font-families);
   cursor: pointer;
-}
-
-.button--forward {
-  &::after {
-    content: "→";
-    transition:
-    opacity 200ms var(--easing--standard),
-    width 200ms var(--easing--standard),
-    margin 200ms var(--easing--standard);
-    display: inline-block;
-    width: 0;
-    margin-left: 0;
-    opacity: 0;
-    font-weight: var(--font-weight);
-    font-family: "Inter", sans-serif;
-  }
-  &:hover::after {
-    width: 1rem;
-    margin-left: 0.5rem;
-    opacity: 1;
+  &.forward {
+    &::after {
+      content: "→";
+      transition:
+      opacity 200ms var(--easing--standard),
+      width 200ms var(--easing--standard),
+      margin 200ms var(--easing--standard);
+      display: inline-block;
+      width: 0;
+      margin-left: 0;
+      opacity: 0;
+      font-weight: var(--font-weight);
+      font-family: "Inter", sans-serif;
+    }
+    &:hover::after {
+      width: 1rem;
+      margin-left: 0.5rem;
+      opacity: 1;
+    }
   }
 }
 
@@ -159,47 +158,40 @@ header {
   @media (min-height: $height--large-phone) {
     position: fixed;
   }
-}
-
-.header__content {
-  @extend %responsive-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 160rem;
-  height: 100%;
-  margin: 0 auto;
-  @media (min-width: $width--tablet) {
-    justify-content: space-between;
+  a {
+    text-decoration: none;
   }
-}
-
-.header__location {
-  display: flex;
-  font-size: var(--font-size--headline--mobile);
-}
-
-.header__link {
-  text-decoration: none;
-}
-
-.header__logo {
-  display: flex;
-  align-items: center;
-}
-
-.header__symbol {
-  fill: var(--color--foreground);
-}
-
-.header__logotype {
-  margin-left: 0.5rem;
-}
-
-.header__school-name {
-  display: none;
-  @media (min-width: $width--tablet) {
-    display: block;
+  > div {
+    @extend %responsive-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 160rem;
+    height: 100%;
+    margin: 0 auto;
+    @media (min-width: $width--tablet) {
+      justify-content: space-between;
+    }
+  }
+  .location {
+    display: flex;
+    font-size: var(--font-size--headline--mobile);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .symbol {
+    fill: var(--color--foreground);
+  }
+  .logotype {
+    margin-left: 0.5rem;
+  }
+  .school-name {
+    display: none;
+    @media (min-width: $width--tablet) {
+      display: block;
+    }
   }
 }
 
