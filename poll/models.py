@@ -237,7 +237,7 @@ class Completion(models.Model):
         StudentGroup, on_delete=models.CASCADE, related_name='completions', related_query_name='completion',
         verbose_name=gettext_lazy('group')
     )
-    added_at = models.DateTimeField(auto_now_add=True, verbose_name=gettext_lazy('added at'))
+    added_at = models.DateTimeField(default=timezone.now, verbose_name=gettext_lazy('added at'))
 
     class Meta:
         verbose_name = gettext_lazy('completion')
