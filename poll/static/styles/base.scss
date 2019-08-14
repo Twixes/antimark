@@ -1,9 +1,4 @@
-/* SASS VARIABLES */
-
-$min-width--desktop: "min-width: 100rem";
-$min-width--laptop: "min-width: 80rem";
-$min-width--tablet: "min-width: 40rem";
-$min-height--tablet: "min-height: 40rem";
+@import "_variables";
 
 /* CSS VARIABLES */
 
@@ -11,8 +6,9 @@ $min-height--tablet: "min-height: 40rem";
   --font-families: "Poppins", "Century Gothic", "Arial Black", sans-serif;
   --font-weight: 700;
   --font-size--error-code: 8rem;
-  --font-size--headline-1: 2rem;
-  --font-size--headline-0: 1.75rem;
+  --font-size--headline--section: 2.75rem;
+  --font-size--headline--standard: 2rem;
+  --font-size--headline--mobile: 1.75rem;
   --font-size--standard: 1.25rem;
   --font-size--annotation: 1rem;
   --color--brand: #0040ff;
@@ -29,6 +25,34 @@ $min-height--tablet: "min-height: 40rem";
   --easing--accelerate: cubic-bezier(0.4, 0.0, 1, 1);
 }
 
+/* SILENT CLASSES */
+
+%edge-bar {
+  position: absolute;
+  width: 100%;
+  height: 4rem;
+  background: var(--color--background);
+  text-align: center;
+}
+
+%responsive-content {
+  max-width: 160rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media (min-width: $width--tablet) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @media (min-width: $width--laptop) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @media (min-width: $width--desktop) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
 /* GENERAL */
 
 *, ::before, ::after {
@@ -42,15 +66,25 @@ $min-height--tablet: "min-height: 40rem";
   }
 }
 
+input:focus {
+  & + label {
+    outline: solid var(--color--accent) 0.25rem;
+  }
+  .js-focus-visible &:not(.focus-visible) + label {
+    outline: none;
+  }
+}
+
 html {
   width: 100%;
   height: 100%;
 }
 
 body {
+  display: flex;
+  position: relative;
   width: 100%;
   min-height: 100%;
-  max-width: 160rem;
   margin: 0;
   background: var(--color--background);
   color: var(--color--foreground);
@@ -65,9 +99,9 @@ a {
 
 h1 {
   margin: 0;
-  font-size: var(--font-size--headline-0);
-  @media ($min-width--tablet) {
-    font-size: var(--font-size--headline-1);
+  font-size: var(--font-size--headline--mobile);
+  @media (min-width: $width--tablet) {
+    font-size: var(--font-size--headline--standard);
   }
 }
 
@@ -93,18 +127,15 @@ button {
   text-transform: uppercase;
   font: var(--font-size--standard) var(--font-families);
   cursor: pointer;
-  &:active {
-    transform: scale(0.9375);
-  }
 }
 
 .button--forward {
   &::after {
     content: "→";
     transition:
-      opacity 200ms var(--easing--standard),
-      width 200ms var(--easing--standard),
-      margin 200ms var(--easing--standard);
+    opacity 200ms var(--easing--standard),
+    width 200ms var(--easing--standard),
+    margin 200ms var(--easing--standard);
     display: inline-block;
     width: 0;
     margin-left: 0;
@@ -119,52 +150,33 @@ button {
   }
 }
 
-.responsive-content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  @media ($min-width--tablet) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  @media ($min-width--laptop) {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  @media ($min-width--desktop) {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-.fixed-bar {
-  position: fixed;
-  width: 100%;
-  height: 4rem;
-  text-align: center;
-}
-
 /* HEADER */
 
 header {
+  @extend %edge-bar;
+  z-index: 999;
   top: 0;
-  background: var(--color--background);
+  @media (min-height: $height--large-phone) {
+    position: fixed;
+  }
 }
 
 .header__content {
+  @extend %responsive-content;
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 160rem;
   height: 100%;
   margin: 0 auto;
-  @media ($min-width--tablet) {
+  @media (min-width: $width--tablet) {
     justify-content: space-between;
   }
 }
 
 .header__location {
   display: flex;
-  font-size: var(--font-size--headline-0);
+  font-size: var(--font-size--headline--mobile);
 }
 
 .header__link {
@@ -186,7 +198,7 @@ header {
 
 .header__school-name {
   display: none;
-  @media ($min-width--tablet) {
+  @media (min-width: $width--tablet) {
     display: block;
   }
 }
@@ -194,12 +206,12 @@ header {
 /* MAIN */
 
 main {
+  @extend %responsive-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
-  min-height: 100%;
+  width: 100%;
   margin: 0 auto;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -209,11 +221,11 @@ main {
   & > *:last-child {
     margin-bottom: 0;
   }
-  @media ($min-width--tablet) {
+  @media (min-width: $width--tablet) {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
-  @media ($min-width--desktop) {
+  @media (min-width: $width--desktop) {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
@@ -222,6 +234,7 @@ main {
 /* FOOTER */
 
 footer {
+  @extend %edge-bar;
   bottom: 0;
   font-size: var(--font-size--annotation);
   color: rgba(#fff, var(--opacity--annotation));
