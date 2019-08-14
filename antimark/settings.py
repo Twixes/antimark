@@ -65,6 +65,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'poll.School'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
