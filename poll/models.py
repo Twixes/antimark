@@ -97,7 +97,6 @@ class Teacher(models.Model):
     MR = 'MR'
     MS = 'MS'
     TITLE_CHOICES = [
-        (None, gettext_lazy('None')),
         (MR, gettext_lazy('Mr.')),
         (MS, gettext_lazy('Ms.'))
     ]
@@ -105,7 +104,7 @@ class Teacher(models.Model):
         School, on_delete=models.CASCADE, related_name='teachers', related_query_name='teacher',
         verbose_name=gettext_lazy('school')
     )
-    title = models.CharField(max_length=10, null=True, choices=TITLE_CHOICES, verbose_name=gettext_lazy('title'))
+    title = models.CharField(max_length=10, blank=True, choices=TITLE_CHOICES, verbose_name=gettext_lazy('title'))
     first_name = models.CharField(max_length=50, verbose_name=gettext_lazy('first name'))
     last_name = models.CharField(max_length=50, verbose_name=gettext_lazy('last name'))
 
@@ -130,11 +129,12 @@ class Subject(models.Model):
     name = models.CharField(max_length=50, verbose_name=pgettext_lazy('inanimate name', 'name'))
     # e.g. "Who teaches you _English_?" or "Kto uczy cię _angielskiego_?"
     name_teacher_selection_case = models.CharField(
-        max_length=50, null=True, default=None,
+        max_length=50, blank=True, default=None,
         verbose_name=gettext_lazy('name in "Who teaches you …?" case (e.g. "English")')
     )
     teachers = models.ManyToManyField(
-        Teacher, related_name='subjects', related_query_name='subject', verbose_name=gettext_lazy('teachers')
+        Teacher, blank=True, related_name='subjects', related_query_name='subject',
+        verbose_name=gettext_lazy('teachers')
     )
 
     class Meta:
@@ -159,7 +159,7 @@ class StudentGroup(models.Model):
         validators=[MinValueValidator(1)], verbose_name=gettext_lazy('number of students')
     )
     subjects = models.ManyToManyField(
-        Subject, related_name='student_groups', related_query_name='student_group',
+        Subject, blank=True, related_name='student_groups', related_query_name='student_group',
         verbose_name=gettext_lazy('subjects')
     )
 
