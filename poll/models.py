@@ -69,7 +69,7 @@ class School(AbstractBaseUser, PermissionsMixin):
             'Designates whether this user should be treated as active. Unselect this instead of deleting accounts.'
         )
     )
-    date_joined = models.DateTimeField(default=timezone.now, verbose_name=gettext_lazy('date joined'))
+    joined_at = models.DateTimeField(default=timezone.now, verbose_name=gettext_lazy('joined at'))
 
     objects = UserManager()
 

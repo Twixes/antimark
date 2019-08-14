@@ -29,7 +29,7 @@ class SchoolAdmin(admin.ModelAdmin):
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
         }),
-        (_('Dates'), {'fields': ('last_login', 'date_joined')}),
+        (_('Dates'), {'fields': ('last_login', 'joined_at')}),
     )
     add_fieldsets = (
         (None, {
