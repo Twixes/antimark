@@ -9,3 +9,7 @@
 </h1>
 <a href="{% url "poll" %}"><button class="button--forward" tabindex="-1">{% trans "Begin" %}</button></a>
 {% endblock %}
+
+{% block footer %}
+  <footer class="edge-bar"><a href="{% url "panel" %}">Panel</a></footer>
+{% endblock %}
