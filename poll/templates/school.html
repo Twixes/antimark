@@ -1,0 +1,15 @@
+{% extends "base_poll.html" %}
+
+{% load i18n %}
+
+{% block main %}
+<h1>
+  {% trans "Teachers have been grading your work the whole school year." %}<br>
+  {% trans "Now you grade theirs." %}
+</h1>
+<a href="{% url "poll" school.username %}"><button class="forward" tabindex="-1">{% trans "Begin" %}</button></a>
+{% endblock %}
+
+{% block footer %}
+  <footer><a href="{% url "panel" %}">Panel</a></footer>
+{% endblock %}

@@ -4,12 +4,27 @@
 
 {% block main %}
 <h1>
-  {% trans "Teachers have been grading your work the whole school year." %}<br>
-  {% trans "Now you grade theirs." %}
+  {% trans "Evaluating teaching staff?" %}<br>
+  {% trans "Survey your students the easy way with Antimark." %}
 </h1>
-<a href="{% url "poll" %}"><button class="forward" tabindex="-1">{% trans "Begin" %}</button></a>
+<ul class="h-stack non-phone">
+  <li>{% trans "Straightforward setup" %}</li>
+  <li>{% trans "Automatic statistics" %}</li>
+  <li>{% trans "Completely free" %}</li>
+</ul>
+</div>
+<div class="r-stack tight">
+  <a href="{% url "school" "demo" %}">
+    <button class="outlined" tabindex="-1">{% trans "Try the demo" %}</button>
+  </a>
+  <a href=""><button class="forward" tabindex="-1">{% trans "Create a school account" %}</button></a>
+</div>
 {% endblock %}
 
 {% block footer %}
-  <footer class="edge-bar"><a href="{% url "panel" %}">Panel</a></footer>
+  <footer class="h-stack">
+    <a href="{% url "panel" %}">{% trans "Panel login" %}</a>
+    <a href="">{% trans "Terms of service" %}</a>
+    <a href="">{% trans "Privacy" %}</a>
+  </footer>
 {% endblock %}

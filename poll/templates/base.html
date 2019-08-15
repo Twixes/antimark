@@ -40,10 +40,10 @@
   </head>
 
   <body>
-    <header class="edge-bar">
+    <header>
       <div>
         <div class="location">
-          <a href="{% url "index" %}" class="link">
+          <a href="{% url "index" %}">
             <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="39" class="symbol">
               <path
@@ -56,7 +56,11 @@
           </a>
           {% block location %}{% endblock %}
         </div>
-        <div class="school-name">{{ school_name|default:_("Your school") }}</div>
+        {% if school %}
+          <a href="{% url "school" school.username %}">
+            <div class="school-name">{{ school.school_name }}</div>
+          </a>
+        {% endif %}
       </div>
     </header>
     <main>{% block main %}{% endblock %}</main>
