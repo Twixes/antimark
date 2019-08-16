@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-16 01:02+0000\n"
-"PO-Revision-Date: 2019-08-16 01:02+0000\n"
+"POT-Creation-Date: 2019-08-16 01:47+0000\n"
+"PO-Revision-Date: 2019-08-16 01:49+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -45,178 +45,182 @@ msgstr ""
 msgid "Poll"
 msgstr "Ankieta"
 
-#: poll/models.py:49 poll/models.py:113 poll/models.py:137
+#: poll/models.py:53 poll/models.py:120 poll/models.py:144
 msgid "teachers"
 msgstr "nauczyciele"
 
-#: poll/models.py:50
+#: poll/models.py:54
 msgid "professors"
 msgstr "profesorowie"
 
-#: poll/models.py:53
+#: poll/models.py:57
 msgid "username"
 msgstr "nazwa użytkownika"
 
-#: poll/models.py:54
+#: poll/models.py:58
 msgid "30 characters or fewer. Letters, digits, underscores and hyphens only."
 msgstr "30 znaków lub mniej. Tylko litery, cyfry, podkreślniki i myślniki."
 
-#: poll/models.py:56
+#: poll/models.py:60
 msgid "school name"
 msgstr "nazwa szkoły"
 
-#: poll/models.py:57
+#: poll/models.py:61
 msgid "email address"
 msgstr "adres email"
 
-#: poll/models.py:59
+#: poll/models.py:63
+msgid "language"
+msgstr "język"
+
+#: poll/models.py:66
 msgid "nomenclature"
 msgstr "nomenklatura"
 
-#: poll/models.py:63
+#: poll/models.py:70
 msgid "staff status"
 msgstr ""
 
-#: poll/models.py:64
+#: poll/models.py:71
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: poll/models.py:67
+#: poll/models.py:74
 msgid "active"
 msgstr ""
 
-#: poll/models.py:69
+#: poll/models.py:76
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
 
-#: poll/models.py:72
+#: poll/models.py:79
 msgid "joined at"
 msgstr "dołączono"
 
-#: poll/models.py:81 poll/models.py:105 poll/models.py:126 poll/models.py:155
-#: poll/models.py:181 poll/models.py:211 poll/models.py:234
+#: poll/models.py:88 poll/models.py:112 poll/models.py:133 poll/models.py:162
+#: poll/models.py:188 poll/models.py:218 poll/models.py:241
 msgid "school"
 msgstr "szkoła"
 
-#: poll/models.py:82
+#: poll/models.py:89
 msgid "schools"
 msgstr "szkoły"
 
-#: poll/models.py:100
+#: poll/models.py:107
 msgid "Mr."
 msgstr "Pan"
 
-#: poll/models.py:101
+#: poll/models.py:108
 msgid "Ms."
 msgstr "Pani"
 
-#: poll/models.py:107
+#: poll/models.py:114
 msgid "title"
 msgstr "tytuł"
 
-#: poll/models.py:108
+#: poll/models.py:115
 msgid "first name"
 msgstr "imię"
 
-#: poll/models.py:109
+#: poll/models.py:116
 msgid "last name"
 msgstr "nazwisko"
 
-#: poll/models.py:112 poll/models.py:193 poll/models.py:261
+#: poll/models.py:119 poll/models.py:200 poll/models.py:268
 msgid "teacher"
 msgstr "nauczyciel"
 
-#: poll/models.py:129 poll/models.py:157
+#: poll/models.py:136 poll/models.py:164
 msgctxt "inanimate name"
 msgid "name"
 msgstr "nazwa"
 
-#: poll/models.py:133
+#: poll/models.py:140
 msgid "name in \"Who teaches you …?\" case (e.g. \"English\")"
 msgstr "nazwa w przypadku \"Kto uczy cię …?\" (np. \"angielskiego\")"
 
-#: poll/models.py:141 poll/models.py:189
+#: poll/models.py:148 poll/models.py:196
 msgid "subject"
 msgstr "przedmiot"
 
-#: poll/models.py:142 poll/models.py:163
+#: poll/models.py:149 poll/models.py:170
 msgid "subjects"
 msgstr "przedmioty"
 
-#: poll/models.py:159
+#: poll/models.py:166
 msgid "number of students"
 msgstr "liczba uczniów"
 
-#: poll/models.py:167 poll/models.py:185 poll/models.py:238
+#: poll/models.py:174 poll/models.py:192 poll/models.py:245
 msgid "group"
 msgstr "grupa"
 
-#: poll/models.py:168
+#: poll/models.py:175
 msgid "groups"
 msgstr "grupy"
 
-#: poll/models.py:197
+#: poll/models.py:204
 msgid "assignment"
 msgstr "przydział"
 
-#: poll/models.py:198
+#: poll/models.py:205
 msgid "assignments"
 msgstr "przydziały"
 
-#: poll/models.py:214
+#: poll/models.py:221
 msgid "position"
 msgstr "pozycja"
 
-#: poll/models.py:216
+#: poll/models.py:223
 msgid "text"
 msgstr "tekst"
 
-#: poll/models.py:219 poll/models.py:257
+#: poll/models.py:226 poll/models.py:264
 msgid "question"
 msgstr "pytanie"
 
-#: poll/models.py:220
+#: poll/models.py:227
 msgid "questions"
 msgstr "pytania"
 
-#: poll/models.py:240
+#: poll/models.py:247
 msgid "added at"
 msgstr "dodano"
 
-#: poll/models.py:243 poll/models.py:247 poll/models.py:253
+#: poll/models.py:250 poll/models.py:254 poll/models.py:260
 msgid "completion"
 msgstr "wypełnienie"
 
-#: poll/models.py:244
+#: poll/models.py:251
 msgid "completions"
 msgstr "wypełnienia"
 
-#: poll/models.py:247 poll/models.py:276
+#: poll/models.py:254 poll/models.py:283
 msgid "No."
 msgstr "nr"
 
-#: poll/models.py:264
+#: poll/models.py:271
 msgctxt "school mark"
 msgid "mark"
 msgstr "ocena"
 
-#: poll/models.py:268 poll/models.py:276
+#: poll/models.py:275 poll/models.py:283
 msgid "vote"
 msgstr "głos"
 
-#: poll/models.py:269
+#: poll/models.py:276
 msgid "votes"
 msgstr "głosy"
 
 #: poll/templates/404.html:7
 msgid "Page not found"
-msgstr ""
+msgstr "Strona nie została znaleziona"
 
 #: poll/templates/500.html:7
 msgid "Server error"
-msgstr ""
+msgstr "Błąd serwera"
 
 #: poll/templates/base.html:14 poll/templates/base.html:20
 #: poll/templates/base.html:26
@@ -226,19 +230,24 @@ msgid ""
 msgstr ""
 "Przez cały rok szkolny nauczyciele oceniali Twoją pracę. Teraz Ty oceń ich."
 
-#: poll/templates/base.html:73
+#: poll/templates/base.html:75 poll/templates/panel.html:5
+msgid "Panel"
+msgstr "Panel"
+
+#: poll/templates/base.html:77
 msgid "Log in"
 msgstr "Zaloguj się"
 
-#: poll/templates/base.html:76
+#: poll/templates/base.html:83
 msgid "Terms"
 msgstr "Warunki"
 
-#: poll/templates/base.html:77
+#: poll/templates/base.html:84
 msgid "Privacy"
 msgstr "Prywatność"
 
-#: poll/templates/base.html:78
+#: poll/templates/base.html:85
+msgctxt "About the platform"
 msgid "About"
 msgstr "O usłudze"
 
@@ -270,10 +279,6 @@ msgstr "Wypróbuj demo"
 msgid "Create a school account"
 msgstr "Utwórz konto szkoły"
 
-#: poll/templates/panel.html:5
-msgid "Panel"
-msgstr "Panel"
-
 #: poll/templates/panel.html:21
 msgid "The panel requires JavaScript to work."
 msgstr "Panel wymaga do działania JavaScriptu."
@@ -282,14 +287,18 @@ msgstr "Panel wymaga do działania JavaScriptu."
 msgid "The poll requires JavaScript to work."
 msgstr "Ankieta wymaga do działania JavaScriptu."
 
-#: poll/templates/school.html:7
+#: poll/templates/school.html:8
+msgid "Professors have been grading your work the whole academic year."
+msgstr "Przez cały rok akademicki profesorowie oceniali Twoją pracę."
+
+#: poll/templates/school.html:10
 msgid "Teachers have been grading your work the whole school year."
 msgstr "Przez cały rok szkolny nauczyciele oceniali Twoją pracę."
 
-#: poll/templates/school.html:8
+#: poll/templates/school.html:12
 msgid "Now you grade theirs."
 msgstr "Teraz Ty oceń ich."
 
-#: poll/templates/school.html:10
+#: poll/templates/school.html:14
 msgid "Begin"
 msgstr "Rozpocznij"
