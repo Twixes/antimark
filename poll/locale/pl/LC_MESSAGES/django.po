@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antimark 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-14 23:52+0000\n"
-"PO-Revision-Date: 2019-08-14 23:53+0000\n"
+"POT-Creation-Date: 2019-08-16 01:02+0000\n"
+"PO-Revision-Date: 2019-08-16 01:02+0000\n"
 "Last-Translator: Twixes <dev@twixes.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -226,21 +226,49 @@ msgid ""
 msgstr ""
 "Przez cały rok szkolny nauczyciele oceniali Twoją pracę. Teraz Ty oceń ich."
 
-#: poll/templates/base.html:59
-msgid "Your school"
-msgstr "Twoja szkoła"
+#: poll/templates/base.html:73
+msgid "Log in"
+msgstr "Zaloguj się"
+
+#: poll/templates/base.html:76
+msgid "Terms"
+msgstr "Warunki"
+
+#: poll/templates/base.html:77
+msgid "Privacy"
+msgstr "Prywatność"
+
+#: poll/templates/base.html:78
+msgid "About"
+msgstr "O usłudze"
 
 #: poll/templates/index.html:7
-msgid "Teachers have been grading your work the whole school year."
-msgstr "Przez cały rok szkolny nauczyciele oceniali Twoją pracę."
+msgid "Evaluating teaching staff?"
+msgstr "Ewaluujesz kadrę nauczycielską?"
 
 #: poll/templates/index.html:8
-msgid "Now you grade theirs."
-msgstr "Teraz Ty oceń ich."
+msgid "Survey your students the easy way with Antimark."
+msgstr "Przeprowadź ankietę wśród uczniów bezproblemowo z Antimarkiem."
 
-#: poll/templates/index.html:10
-msgid "Begin"
-msgstr "Rozpocznij"
+#: poll/templates/index.html:11
+msgid "straightforward setup"
+msgstr "przystępna konfiguracja"
+
+#: poll/templates/index.html:12
+msgid "automatic statistics"
+msgstr "automatyczne statystyki"
+
+#: poll/templates/index.html:13
+msgid "completely free"
+msgstr "zupełnie za darmo"
+
+#: poll/templates/index.html:18
+msgid "Try the demo"
+msgstr "Wypróbuj demo"
+
+#: poll/templates/index.html:20
+msgid "Create a school account"
+msgstr "Utwórz konto szkoły"
 
 #: poll/templates/panel.html:5
 msgid "Panel"
@@ -253,3 +281,15 @@ msgstr "Panel wymaga do działania JavaScriptu."
 #: poll/templates/poll.html:21
 msgid "The poll requires JavaScript to work."
 msgstr "Ankieta wymaga do działania JavaScriptu."
+
+#: poll/templates/school.html:7
+msgid "Teachers have been grading your work the whole school year."
+msgstr "Przez cały rok szkolny nauczyciele oceniali Twoją pracę."
+
+#: poll/templates/school.html:8
+msgid "Now you grade theirs."
+msgstr "Teraz Ty oceń ich."
+
+#: poll/templates/school.html:10
+msgid "Begin"
+msgstr "Rozpocznij"
