@@ -1,7 +1,6 @@
 """Django settings for antimark project."""
 
 import os
-from django.utils.translation import gettext_lazy as _
 import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -86,8 +85,8 @@ SECURE_HSTS_SECONDS = 365 * 24 * 60 * 60 if not DEBUG else 0
 
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
-    ('en-us', _('English')),
-    ('pl', _('Polish'))
+    ('en-us', 'English'),
+    ('pl', 'polski')
 ]
 TIME_ZONE = 'UTC'
 USE_I18N = True

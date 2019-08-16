@@ -5,6 +5,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext, gettext_lazy, pgettext_lazy
+from antimark.settings import LANGUAGES
 
 
 class SchoolManager(BaseUserManager):
@@ -43,6 +44,9 @@ class SchoolManager(BaseUserManager):
 
 
 class School(AbstractBaseUser, PermissionsMixin):
+    ENGLISH = 'en-us'
+    POLISH = 'pl'
+    LANGUAGE_CHOICES = LANGUAGES
     TEACHERS = 'teachers'
     PROFESSORS = 'professors'
     NOMENCLATURE_CHOICES = [
@@ -55,6 +59,9 @@ class School(AbstractBaseUser, PermissionsMixin):
     )
     school_name = models.CharField(max_length=50, verbose_name=gettext_lazy('school name'))
     email = models.EmailField(verbose_name=gettext_lazy('email address'))
+    language = models.CharField(
+        max_length=5, choices=LANGUAGE_CHOICES, verbose_name=gettext_lazy('language')
+    )
     nomenclature = models.CharField(
         max_length=30, choices=NOMENCLATURE_CHOICES, default=TEACHERS, verbose_name=gettext_lazy('nomenclature')
     )

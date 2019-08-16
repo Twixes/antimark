@@ -25,7 +25,7 @@ class SchoolAdmin(admin.ModelAdmin):
     add_form_template = 'admin/auth/user/add_form.html'
     change_user_password_template = None
     fieldsets = (
-        (None, {'fields': ('username', 'school_name', 'email', 'nomenclature')}),
+        (None, {'fields': ('username', 'school_name', 'email', 'language', 'nomenclature')}),
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
         }),
