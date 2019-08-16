@@ -4,7 +4,11 @@
 
 {% block main %}
 <h1>
-  {% trans "Teachers have been grading your work the whole school year." %}<br>
+  {% if school.nomenclature == 'professors' %}
+    {% trans "Professors have been grading your work the whole academic year." %}<br>
+  {% else %}
+    {% trans "Teachers have been grading your work the whole school year." %}<br>
+  {% endif %}
   {% trans "Now you grade theirs." %}
 </h1>
 <a href="{% url "poll" school.username %}"><button class="forward" tabindex="-1">{% trans "Begin" %}</button></a>
