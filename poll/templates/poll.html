@@ -4,6 +4,10 @@
 
 {% block title-location %}{{ school.school_name }} – {% endblock %}
 
+{% block meta-tags %}
+  <meta name="robots" content="noindex">
+{% endblock %}
+
 {% block styles %}
   {{ block.super }}
   <link rel="stylesheet" href="{% sass_src "styles/components.scss" %}">
