@@ -8,23 +8,15 @@
   {% trans "Survey your students the easy way with Antimark." %}
 </h1>
 <ul class="h-stack non-phone">
-  <li>{% trans "Straightforward setup" %}</li>
-  <li>{% trans "Automatic statistics" %}</li>
-  <li>{% trans "Completely free" %}</li>
+  <li>{% trans "straightforward setup" %}</li>
+  <li>{% trans "automatic statistics" %}</li>
+  <li>{% trans "completely free" %}</li>
 </ul>
 </div>
-<div class="r-stack tight">
+<div class="r-stack compact">
   <a href="{% url "school" "demo" %}">
     <button class="outlined" tabindex="-1">{% trans "Try the demo" %}</button>
   </a>
   <a href=""><button class="forward" tabindex="-1">{% trans "Create a school account" %}</button></a>
 </div>
-{% endblock %}
-
-{% block footer %}
-  <footer class="h-stack">
-    <a href="{% url "panel" %}">{% trans "Panel login" %}</a>
-    <a href="">{% trans "Terms of service" %}</a>
-    <a href="">{% trans "Privacy" %}</a>
-  </footer>
 {% endblock %}

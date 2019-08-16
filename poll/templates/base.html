@@ -41,7 +41,7 @@
 
   <body>
     <header>
-      <div>
+      <div class="content">
         <div class="location">
           <a href="{% url "index" %}">
             <div class="logo">
@@ -57,14 +57,35 @@
           {% block location %}{% endblock %}
         </div>
         {% if school %}
-          <a href="{% url "school" school.username %}">
-            <div class="school-name">{{ school.school_name }}</div>
+          <a href="{% url "school" school.username %}" class="school-name">
+            <div>{{ school.school_name }}</div>
           </a>
         {% endif %}
       </div>
     </header>
-    <main>{% block main %}{% endblock %}</main>
-    {% block footer %}{% endblock %}
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+    <footer class="h-stack">
+      <div class="h-stack content">
+        {% block panel-link %}
+          <div>
+            <a href="{% url "panel" %}">
+              {% if user.is_authenticated %}
+                {% trans "Panel" %}
+              {% else %}
+                {% trans "Log in" %}
+              {% endif %}
+            </a>
+          </div>
+        {% endblock %}
+        <div class="h-stack">
+          <a href="">{% trans "Terms" %}</a>
+          <a href="">{% trans "Privacy" %}</a>
+          <a href="">{% trans "About" %}</a>
+        </div>
+      </div>
+    </footer>
     {% block body-scripts %}{% endblock %}
   </body>
 </html>

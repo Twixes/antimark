@@ -212,11 +212,11 @@ button {
   & > * {
     margin-bottom: 1.5rem;
   }
+  &.compact > * {
+    margin-bottom: 0.75rem;
+  }
   & > *:last-child {
     margin-bottom: 0;
-  }
-  &.tight > * {
-    margin-bottom: 0.75rem;
   }
 }
 
@@ -225,11 +225,11 @@ button {
   & > * {
     margin-right: 1.5rem;
   }
+  &.compact > * {
+    margin-right: 0.75rem;
+  }
   & > *:last-child {
     margin-right: 0;
-  }
-  &.tight > * {
-    margin-right: 0.75rem;
   }
 }
 
@@ -238,11 +238,11 @@ button {
   & > * {
     margin-bottom: 1.5rem;
   }
+  &.compact > * {
+    margin-bottom: 0.75rem;
+  }
   & > *:last-child {
     margin-bottom: 0;
-  }
-  &.tight > * {
-    margin-bottom: 0.75rem;
   }
   @media screen and (min-width: $width--tablet) {
     flex-direction: row;
@@ -250,11 +250,12 @@ button {
       margin-right: 1.5rem;
       margin-bottom: 0;
     }
+    &.compact > * {
+      margin-right: 0.75rem;
+      margin-bottom: 0;
+    }
     & > *:last-child {
       margin-right: 0;
-    }
-    &.tight > * {
-      margin-right: 0.75rem;
     }
   }
 }
@@ -277,7 +278,7 @@ header {
   a {
     text-decoration: none;
   }
-  > div {
+  .content {
     @extend %responsive-content;
     display: flex;
     align-items: center;
@@ -342,8 +343,17 @@ main {
 footer {
   @extend %edge-bar;
   bottom: 0;
-  font-size: var(--font-size--annotation);
   color: rgba(#fff, var(--opacity--annotation));
+  font-size: var(--font-size--annotation);
+  white-space: nowrap;
+  overflow: hidden;
+  .content {
+    @extend %responsive-content;
+    flex-wrap: wrap;
+    > * {
+      margin: 0 0.75rem !important; // this is necessary to maintain symmetry when the flex wraps
+    }
+  }
 }
 
 /* ERROR PAGE */
