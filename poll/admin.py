@@ -25,7 +25,7 @@ class SchoolAdmin(admin.ModelAdmin):
     add_form_template = 'admin/auth/user/add_form.html'
     change_user_password_template = None
     fieldsets = (
-        (None, {'fields': ('username', 'school_name', 'email', 'language', 'nomenclature')}),
+        (None, {'fields': ('username', 'name', 'email', 'language', 'nomenclature')}),
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
         }),
@@ -38,9 +38,9 @@ class SchoolAdmin(admin.ModelAdmin):
         }),
     )
     change_password_form = AdminPasswordChangeForm
-    list_display = ('username', 'school_name', 'email', 'is_staff')
+    list_display = ('username', 'name', 'email', 'is_staff')
     list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups')
-    search_fields = ('username', 'school_name', 'email')
+    search_fields = ('username', 'name', 'email')
     ordering = ('username',)
     filter_horizontal = ('groups', 'user_permissions',)
 

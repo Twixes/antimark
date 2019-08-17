@@ -11,36 +11,36 @@ from antimark.settings import LANGUAGES
 class SchoolManager(BaseUserManager):
     use_in_migrations = True
 
-    def _create_user(self, username: str, school_name: str, email: str, password: str, **extra_fields):
+    def _create_user(self, username: str, name: str, email: str, password: str, **extra_fields):
         if not username:
             raise ValueError('The given username must be set')
-        if not school_name:
-            raise ValueError('The given school_name must be set')
+        if not name:
+            raise ValueError('The given name must be set')
         if not email:
             raise ValueError('The given email must be set')
         if not password:
             raise ValueError('The given password must be set')
         username = self.model.normalize_username(username)
-        school_name = school_name.strip()
+        name = name.strip()
         email = self.normalize_email(email)
-        user = self.model(username=username, school_name=school_name, email=email, **extra_fields)
+        user = self.model(username=username, name=name, email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_user(self, username: str, school_name: str, email: str, password: str, **extra_fields):
+    def create_user(self, username: str, name: str, email: str, password: str, **extra_fields):
         extra_fields.setdefault('is_staff', False)
         extra_fields.setdefault('is_superuser', False)
-        return self._create_user(username, school_name, email, password, **extra_fields)
+        return self._create_user(username, name, email, password, **extra_fields)
 
-    def create_superuser(self, username: str, school_name: str, email: str, password: str, **extra_fields):
+    def create_superuser(self, username: str, name: str, email: str, password: str, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         if extra_fields.get('is_staff') is not True:
             raise ValueError('Superuser must have is_staff=True.')
         if extra_fields.get('is_superuser') is not True:
             raise ValueError('Superuser must have is_superuser=True.')
-        return self._create_user(username, school_name, email, password, **extra_fields)
+        return self._create_user(username, name, email, password, **extra_fields)
 
 
 class School(AbstractBaseUser, PermissionsMixin):
@@ -57,7 +57,7 @@ class School(AbstractBaseUser, PermissionsMixin):
         max_length=30, unique=True, verbose_name=gettext_lazy('username'),
         help_text=gettext_lazy('30 characters or fewer. Letters, digits, underscores and hyphens only.')
     )
-    school_name = models.CharField(max_length=50, verbose_name=gettext_lazy('school name'))
+    name = models.CharField(max_length=50, verbose_name=gettext_lazy('school name'))
     email = models.EmailField(verbose_name=gettext_lazy('email address'))
     language = models.CharField(
         max_length=5, choices=LANGUAGE_CHOICES, verbose_name=gettext_lazy('language')
@@ -82,14 +82,14 @@ class School(AbstractBaseUser, PermissionsMixin):
 
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['school_name', 'email']
+    REQUIRED_FIELDS = ['name', 'email']
 
     class Meta:
         verbose_name = gettext_lazy('school')
         verbose_name_plural = gettext_lazy('schools')
 
     def __str__(self):
-        return self.school_name
+        return self.name
 
     def clean(self):
         super().clean()
