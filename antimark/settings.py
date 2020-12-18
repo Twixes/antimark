@@ -17,6 +17,7 @@ ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
 INSTALLED_APPS = [
     'poll.apps.PollConfig',
     'sass_processor',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -104,3 +105,8 @@ STATICFILES_FINDERS = [
 ]
 
 SASS_PRECISION = 8
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ['poll.permissions.IsAuthenticatedAndOwnerOrIsStaffOrReadOnly'],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+}

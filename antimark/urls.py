@@ -1,10 +1,11 @@
 """antimark URL Configuration"""
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from django.views.generic import TemplateView
 from django.views.i18n import JavaScriptCatalog
 from poll.views import SchoolView, PollView
+from antimark.api import router
 from .settings import DEBUG
 
 urlpatterns = [
@@ -13,7 +14,8 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('i18n.js', JavaScriptCatalog.as_view(), name='javascript-catalog'),
     path('<slug:username>/', SchoolView.as_view(), name='school'),
-    path('<slug:username>/poll/', PollView.as_view(), name='poll')
+    path('<slug:username>/poll/', PollView.as_view(), name='poll'),
+    path('api/v1/', include(router.urls))
 ]
 
 if DEBUG:
