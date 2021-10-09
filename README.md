@@ -1,6 +1,6 @@
 # Antimark
 
-A teacher evaluation platform built with Django and Vue. Work in progress.
+A teacher evaluation platform built with Django and Vue. Unfinished!
 
 <img src="README-LANDING.png"></img>
 
